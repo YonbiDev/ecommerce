@@ -1,0 +1,282 @@
+<html><head><base href=""><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ElectroShop - Votre boutique en ligne</title>
+<style>
+:root {
+  --primary: #2c3e50;
+  --accent: #e74c3c;
+  --light: #ecf0f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--light);
+}
+
+nav {
+  background: var(--primary);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo svg {
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              var(--primary);
+  color: white;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+.products {
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-img {
+  width: 100%;
+  height: 200px;
+  background: var(--light);
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background: var(--primary);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+      <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 4h2l3.6 7.59L3.62 17H19v-2H7l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.67-1.43c-.16-.35-.52-.57-.9-.57H1v2zm16 14c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+    </svg>
+    ElectroShop
+  </div>
+  <div class="nav-links">
+    <a href="#home">Accueil</a>
+    <a href="#products">Produits</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Bienvenue sur ElectroShop</h1>
+    <p>Découvrez notre sélection de produits électroniques</p>
+    <button class="cta-button">Voir nos produits</button>
+  </div>
+</section>
+
+<section id="products" class="products">
+  <div class="product-card">
+    <div class="product-img">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="#2c3e50">
+        <path d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z"/>
+      </svg>
+    </div>
+    <h3>Smartphone XYZ</h3>
+    <p>Prix: 599€</p>
+    <button class="cta-button">Ajouter au panier</button>
+  </div>
+  
+  <div class="product-card">
+    <div class="product-img">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="#2c3e50">
+        <path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
+      </svg>
+    </div>
+    <h3>Laptop ABC</h3>
+    <p>Prix: 999€</p>
+    <button class="cta-button">Ajouter au panier</button>
+  </div>
+  
+  <div class="product-card">
+    <div class="product-img">
+      <img src="data:image/webp;base64,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" alt="">
+    </div>
+    <h3>Casque Audio PRO</h3>
+    <p>Prix: 199€</p>
+    <button class="cta-button">Ajouter au panier</button>
+  </div>
+</section>
+
+<section id="contact" class="contact-form">
+  <h2>Nous Contacter</h2>
+  <form>
+    <div class="form-group">
+      <label>Nom</label>
+      <input type="text" required>
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" required>
+    </div>
+    <div class="form-group">
+      <label>Message</label>
+      <textarea rows="5" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Envoyer</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2024 ElectroShop. Tous droits réservés.</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Smooth scroll pour les liens de navigation
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Animation du bouton CTA
+  const ctaButtons = document.querySelectorAll('.cta-button');
+  ctaButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      this.style.transform = 'scale(0.95)';
+      setTimeout(() => {
+        this.style.transform = 'scale(1)';
+      }, 100);
+    });
+  });
+
+  // Gestion du formulaire
+  const contactForm = document.querySelector('form');
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Message envoyé ! Nous vous répondrons dans les plus brefs délais.');
+    this.reset();
+  });
+});
+</script>
+
+</body></html>
